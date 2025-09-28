@@ -90,6 +90,10 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const lastNameSort = (inventors) => {
+      return [...inventors].sort((a, b) => a.last.localeCompare(b.last))
+    }
+    console.table(lastNameSort(inventors))
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
