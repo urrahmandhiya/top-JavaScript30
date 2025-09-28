@@ -99,6 +99,14 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const sumOfInstances = (data) => {
+      return data.reduce((acc, curr) => {
+        acc[curr] = (acc[curr] || 0 ) + 1;
+        return acc;
+      },{})
+    }
+    console.table(sumOfInstances(data));
+    
   </script>
 </body>
 </html>
