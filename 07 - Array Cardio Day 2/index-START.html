@@ -50,6 +50,11 @@
     }
     console.log(findCommentIndex(comments, 823423))
     // delete the comment with the ID of 823423
+    const deleteComment = (comments, commentID) => {
+      let idx = findCommentIndex(comments, commentID)
+      return [...comments].splice(idx, 1)
+    }
+    console.table(deleteComment(comments, 823423))
   </script>
 </body>
 </html>
